@@ -1,59 +1,94 @@
-# 101409473LabTest2Comp3133
+COMP 3133 Lab Test 2
+Name: Milan Mislov
+Student ID: 101409473
+Course: Full Stack Development
+Lab Test: Angular Harry Potter Character App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+---
 
-## Development server
+Description:
+This Angular application displays a list of Harry Potter characters with the following features:
 
-To start a local development server, run:
+- Character List: Browse all characters from the HP API
+- Character Filter: Filter characters by Hogwarts house
+- Character Details: View detailed info about a selected character
+- Responsive UI using Angular Material
+- Placeholder Image Support for characters missing image URLs
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Live Demo:
+Hosted on Vercel: https://101409473-lab-test2-comp3133-quwirmfnq-milans-projects-fd05ea33.vercel.app/
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Technologies Used:
+- Angular 17 (standalone components)
+- Angular Material
+- TypeScript
+- REST API (HP-API)
+- Hosted via Vercel
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Features:
+- Character List: Displays all characters (name, house, image)
+- Filter by House: Dropdown to filter by Gryffindor, Slytherin, Hufflepuff, Ravenclaw
+- Character Details: Shows ancestry, wand details, actor, species, wizard status, and more
+- Fallback Images: Displays a local placeholder image if a character image is missing
+- Navigation: Top nav bar for Character List & Filter options
+- Routing: Angular Router with routerLink and dynamic :id routes
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+Folder Structure:
+src/
+  ├── app/
+  │   ├── components/
+  │   │   ├── characterlist/
+  │   │   ├── characterfilter/
+  │   │   └── characterdetails/
+  │   ├── services/
+  │   └── app.routes.ts
+  ├── assets/
+  │   └── Placeholder.jpg
+  └── styles.css
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+Setup Instructions (Local):
+1. Clone the repository
+   git clone https://github.com/milantheman/101409473-lab-test2-comp3133.git
+   cd 101409473-lab-test2-comp3133
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+2. Install dependencies
+   npm install
 
-## Running unit tests
+3. Run the app
+   ng serve
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+Deployment Instructions (Vercel):
+1. Push to GitHub
+2. Import the repo into https://vercel.com
+3. Set:
+   - Build command: npm run build
+   - Output directory: dist/101409473-lab-test2-comp3133/browser
+4. Add vercel.json with:
 
-## Running end-to-end tests
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
 
-For end-to-end (e2e) testing, run:
+API Reference:
+- Characters: https://hp-api.onrender.com/api/characters
+- Filter by House: https://hp-api.onrender.com/api/characters/house/gryffindor
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Author:
+Name: Milan Mislov
+Student ID: 101409473
