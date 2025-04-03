@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HpService, Character } from '../../services/hp.service';
 import { MatCardModule } from '@angular/material/card';
+import { HpService, Character } from '../../services/hp.service';
 
 @Component({
   selector: 'app-characterdetails',

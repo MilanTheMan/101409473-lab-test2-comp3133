@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HpService, Character } from '../../services/hp.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
+import { RouterModule } from '@angular/router';
+import { HpService, Character } from '../../services/hp.service';
 
 @Component({
   selector: 'app-characterlist',
@@ -14,10 +14,15 @@ import { MatCardModule } from '@angular/material/card';
 export class CharacterlistComponent implements OnInit {
   characters: Character[] = [];
 
-  constructor(private hpService: HpService) { }
-
+  constructor(private hpService: HpService) {}
+  onImageError(event: Event) {
+    const img = event.target as HTMLImageElement;
+    img.src = 'assets/Placeholder.jpg';
+  }
   ngOnInit(): void {
+    console.log('CharacterlistComponent INIT');
     this.hpService.getCharacters().subscribe((data: Character[]) => {
+      console.log('Characters fetched:', data);
       this.characters = data;
     });
   }

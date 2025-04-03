@@ -1,9 +1,12 @@
 <div class="character-list">
-    <mat-card *ngFor="let character of characters" class="character-card">
-        <img mat-card-image [src]="character.image" alt="{{ character.name }}" />
-        <mat-card-content>
-            <h3>{{ character.name }}</h3>
-            <p>{{ character.house || 'No House' }}</p>
-        </mat-card-content>
-    </mat-card>
+    <a *ngFor="let character of characters" [routerLink]="['/character', character.name]"
+        style="text-decoration: none;">
+        <mat-card class="character-card">
+            <img mat-card-image [src]="character.image || 'assets/Placeholder.jpg'" [alt]="character.name" />
+            <mat-card-content>
+                <h3>{{ character.name }}</h3>
+                <p>{{ character.house || 'No House' }}</p>
+            </mat-card-content>
+        </mat-card>
+    </a>
 </div>

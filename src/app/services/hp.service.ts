@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Character {
+  id: string;
   name: string;
   house: string;
   image: string;
