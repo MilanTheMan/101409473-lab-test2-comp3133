@@ -1,0 +1,13 @@
+.character-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+}
+
+.character-card
+{
+    width: 200px;
+}

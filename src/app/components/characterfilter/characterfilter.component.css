@@ -1,0 +1,26 @@
+.filter-container
+{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.character-card
+{
+    width: 200px;
+}
+
+.house
+{
+    color: green;
+}

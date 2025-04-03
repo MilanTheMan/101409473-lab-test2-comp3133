@@ -1,3 +1,10 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { CharacterlistComponent } from './components/characterlist/characterlist.component';
+import { CharacterfilterComponent } from './components/characterfilter/characterfilter.component';
+
+
+export const routes: Routes = [
+    { path: '', component: CharacterlistComponent },
+    { path: 'filter', component: CharacterfilterComponent },
+];
