@@ -34,5 +34,10 @@ export class HpService {
     const url = `https://hp-api.onrender.com/api/characters/house/${house}`;
     return this.http.get<Character[]>(url);
   }
+
+  getCharacterById(id: string): Observable<Character> {
+    const url = `https://hp-api.onrender.com/api/character/${id}`;
+    return this.http.get<Character>(url);
+  }
   
 }

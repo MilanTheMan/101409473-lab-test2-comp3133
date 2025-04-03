@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HpService, Character } from '../../services/hp.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-characterlist',
   standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule
-  ],
+  imports: [CommonModule, MatCardModule, RouterModule],
   templateUrl: './characterlist.component.html',
   styleUrls: ['./characterlist.component.css']
 })

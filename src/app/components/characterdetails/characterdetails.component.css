@@ -1,0 +1,11 @@
+.details-container
+{
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+mat-card
+{
+    width: 400px;
+}
