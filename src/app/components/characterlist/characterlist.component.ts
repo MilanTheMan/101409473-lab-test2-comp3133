@@ -20,9 +20,7 @@ export class CharacterlistComponent implements OnInit {
     img.src = 'assets/Placeholder.jpg';
   }
   ngOnInit(): void {
-    console.log('CharacterlistComponent INIT');
     this.hpService.getCharacters().subscribe((data: Character[]) => {
-      console.log('Characters fetched:', data);
       this.characters = data;
     });
   }
